@@ -8,6 +8,11 @@ def get_main():
     return '<h1>Welcome to our Flask application</h1>'
 
 
+@app.route('/puppy')
+def get_puppy():
+    return render_template('index.html')
+
+
 @app.route('/<username>')
 def get_user(username):
     return f'<h1>Hello {username}</h1>'
